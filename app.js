@@ -340,16 +340,18 @@ const publicDir = path.join(__dirname, "../public");
 if (!fs.existsSync(publicDir)) {
   fs.mkdirSync(publicDir, { recursive: true });
 }
-
 app.get("/download", async (req, res) => {
   let browser;
   try {
     browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
-    await page.goto("https://anz-statement.onrender.com/", {
-      waitUntil: "networkidle2",
-    });
+    // Dynamically construct the URL
+    const internetProvider = req.protocol; // 'http' or 'https'
+    const host = req.get("host"); // 'anz-statement.onrender.com' or 'localhost:3000'
+    const baseURL = `${internetProvider}://${host}`;
+
+    await page.goto(`${baseURL}/`, { waitUntil: "networkidle2" });
     await page.setViewport({ width: 1680, height: 1050 });
 
     const todayDate = new Date();
@@ -382,6 +384,45 @@ app.get("/download", async (req, res) => {
     res.status(500).send("Error generating PDF");
   }
 });
+// app.get("/download", async (req, res) => {
+//   let browser;
+//   try {
+//     browser = await puppeteer.launch({ headless: true });
+//     const page = await browser.newPage();
+
+//     await page.goto("http://localhost:3000/", { waitUntil: "networkidle2" });
+//     await page.setViewport({ width: 1680, height: 1050 });
+
+//     const todayDate = new Date();
+//     const pdfPath = path.join(publicDir, `${todayDate.getTime()}.pdf`);
+
+//     // Generate PDF and save to the specified path
+//     await page.pdf({
+//       path: pdfPath,
+//       format: "A4",
+//       printBackground: true,
+//     });
+
+//     await browser.close();
+
+//     res.setHeader("Content-Disposition", `attachment; filename="invoice.pdf"`);
+//     res.setHeader("Content-Type", "application/pdf");
+
+//     // Send the PDF file as a response to the client
+//     res.sendFile(pdfPath, (err) => {
+//       if (err) {
+//         console.error("Error sending PDF file:", err);
+//         res.status(500).send("Error sending PDF");
+//       } else {
+//         console.log("PDF file sent successfully.");
+//       }
+//     });
+//   } catch (error) {
+//     console.error("Error generating PDF:", error);
+//     if (browser) await browser.close();
+//     res.status(500).send("Error generating PDF");
+//   }
+// });
 
 // Route to download the invoice as PDF
 // app.get("/d", async (req, res) => {
