@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANZ Bank Statement</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-title">
+            <img src="image.png" alt="ANZ Logo" class="logo">
+            <h1 class="header-h1">ANZ ACCESS ADVANTAGE STATEMENT</h1>
+            <p class="statement-info">STATEMENT NUMBER  <%= statementNumber %> </p>
+            <p class="date-range"><%= statementDate %></p>
+        </div>
+    </header>
+
+    <!-- Account Holder Information -->
+    <div class="account-holder-info">
+        <p>Ms Michaela Finnegan<br>12 Wilfrid St.,<br>Macquarie Fields NSW 2564</p>
+    </div>
+
+    <!-- Account Summary Section -->
+    <section class="account-summary">
+      <h1>WELCOME TO YOUR ANZ ACCOUNT AT A GLANCE</h1>
+        
+      <div class="account-grid">
+          <div class="account-details">
+              <div class="detail-group">
+                  <div class="detail-label">Account Details</div>
+                  <div class="detail-value">Mr John Doe</div>
+              </div>
+              
+              <div class="detail-group">
+                  <div class="detail-label">Branch Number (BSB)</div>
+                  <div class="detail-value">012-327</div>
+              </div>
+              
+              <div class="detail-group">
+                  <div class="detail-label">Account Number</div>
+                  <div class="detail-value">46844274</div>
+              </div>
+          </div>
+          
+          <div class="balance-summary">
+              <div class="balance-item">
+                  <div class="balance-label">Opening Balance:</div>
+                  <div class="balance-amount">
+                      <span class="amount-symbol">$</span>10264.79
+                  </div>
+              </div>
+              
+              <div class="balance-item">
+                  <div class="balance-label">Total Deposits:</div>
+                  <div class="balance-amount">
+                      <span class="amount-symbol">$</span>7405.41
+                  </div>
+              </div>
+              
+              <div class="balance-item">
+                  <div class="balance-label">Total Withdrawals:</div>
+                  <div class="balance-amount">
+                      <span class="amount-symbol">$</span>3,535.00
+                  </div>
+              </div>
+              
+              <div class="balance-item">
+                  <div class="balance-label">Closing Balance:</div>
+                  <div class="balance-amount">
+                      <span class="amount-symbol">$</span>14,135.10
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </section>
+
+    <!-- Contact Information Section -->
+    <footer>
+      <h2 class="contact-header">NEED TO GET IN TOUCH?</h2>
+        
+      <div class="contact-content">
+          <div class="contact-item">
+              <div class="contact-icon">💻</div>
+              <div class="contact-text">ANZ Internet banking</div>
+              <a href="https://anz.com" class="contact-link">anz.com</a>
+          </div>
+
+          <div class="contact-divider">
+              <div class="or-circle">OR</div>
+          </div>
+
+          <div class="contact-item phone-numbers">
+            <i style="font-size:24px" class="fa">&#xf095;</i>
+              <div class="phone-line">Enquiries: <strong>13 13 14</strong></div>
+              <div class="phone-line">Lost/Stolen Card: <strong>1800 033 844</strong></div>
+          </div>
+      </div>
+
+      <div class="legal-info">
+          Australia and New Zealand Banking Group Limited (ANZ) ABN 11 005 357 522. AFSL 234527. Aust. Credit License No. 234527.
+      </div>
+
+      <div class="reference-number">
+          RTBSP04L.MAIL
+      </div>
+    </footer>
+
+
+    <!-- ///////////////////////////////// -->
+
+
+    <transaction>
+
+      <div class="transaction-container">
+        <div class="statement-header">
+            <h1 class="statement-title">ANZ ACCESS ADVANTAGE STATEMENT</h1>
+            <h3 class="account-number">Account Number 123456789</h3>
+        </div>
+
+        <div class="transaction-section">
+            <h2>Transaction Details</h2>
+            <div class="tax-notice">Please retain this statement for taxation purposes</div>
+
+            <table class="transactions-table">
+                <thead>
+                    <tr>
+                        <th class="amount-column-left">Date</th>
+                        <th class="amount-column-left" >Transaction Details</th>
+                        <th class="amount-column">Withdrawals ($)</th>
+                        <th class="amount-column">Deposits ($)</th>
+                        <th class="amount-column">Balance ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% transactions.forEach(function(transaction) { %>
+                        <tr <%= transaction.isYear ? 'class="year-marker"' : '' %>>
+                            <td class="date-column">
+                                <% if (transaction.isYear) { %>
+                                    <%= transaction.year %>
+                                <% } %>
+                                <div class="">
+                                  <%= transaction.date %>
+                                </div>
+                            </td>
+                            <td class="transaction-details">
+                                <div class="bold-transaction-details"><%= transaction.details %></div>
+                                <% if (transaction.description) { %>
+                                    <div class="transaction-description"><%= transaction.description %></div>
+                                <% } %>
+                            </td>
+                            <td class="amount-column"><%= transaction.withdrawal || '' %></td>
+                            <td class="amount-column"><%= transaction.deposit || '' %></td>
+                            <td class="balance-column"><%= transaction.balance %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </transaction>
+
+
+
+    <transaction>
+
+      <div class="transaction-container">
+        <div class="statement-header">
+            <h1 class="statement-title">ANZ ACCESS ADVANTAGE STATEMENT</h1>
+            <h3 class="account-number">Account Number 123456789</h3>
+        </div>
+
+        <div class="transactionPage2">
+          <div class="transaction-section">
+              <!-- <h2>Transaction Details</h2>
+              <div class="tax-notice">Please retain this statement for taxation purposes</div> -->
+
+              <table class="transactions-table">
+                  <thead>
+                      <tr>
+                          <th class="amount-column-left">Date</th>
+                          <th class="amount-column-left" >Transaction Details</th>
+                          <th class="amount-column">Withdrawals ($)</th>
+                          <th class="amount-column">Deposits ($)</th>
+                          <th class="amount-column">Balance ($)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% transactions2.forEach(function(transaction) { %>
+                          <tr <%= transaction.isYear ? 'class="year-marker"' : '' %>>
+                              <td class="date-column">
+                                  <% if (transaction.isYear) { %>
+                                      <%= transaction.year %>
+                                  <% } %>
+                                  <div class="">
+                                    <%= transaction.date %>
+                                  </div>
+                              </td>
+                              <td class="transaction-details">
+                                  <div class="bold-transaction-details"><%= transaction.details %></div>
+                                  <% if (transaction.description) { %>
+                                      <div class="transaction-description"><%= transaction.description %></div>
+                                  <% } %>
+                              </td>
+                              <td class="amount-column"><%= transaction.withdrawal || '' %></td>
+                              <td class="amount-column"><%= transaction.deposit || '' %></td>
+                              <td class="balance-column"><%= transaction.balance %></td>
+                          </tr>
+                      <% }); %>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+      <div class="transaction-Footer">
+        <div class="transaction-Footer-Title">This Statement Includes</div>
+        <div class="transaction-Footer-content">
+          <span class="transaction-Footer-content-first"/>28 FEB <span class="transaction-Footer-content-second"/>ANZ bank charges <span class="transaction-Footer-content-last"/> $5.00
+        </div>
+      </div>
+    </div>
+    </transaction>
+
+
+    <!-- /////////////////////////////////// -->
+
+    <feeSummary>
+      <div class="fees-statement-container">
+        <div class="statement-header">
+          <h1 class="statement-title">ANZ ACCESS ADVANTAGE STATEMENT</h1>
+          <h3 class="account-number">Account Number 123456789</h3>
+        </div>
+        
+        <div class="fees-summary">Fees Sumamry</div>
+        <div class="fee-period">Fees Charged for period:  <%= statementDate %> </div>
+        <div class="summary-header">
+            <div class="amount">Summary of ANZ Transaction Fees</div>
+            <div class="amount">Transactions Total Free Additional</div>
+            <div class="amount">Fee Per Transaction <div class=""> ($)</div> </div>
+            <div class="amount">Amount Waived <div class=""> ($)</div> </div>
+            <div class="amount">Total Charge <div class=""> ($)</div>  </div>
+        </div>
+
+        <div class="summary-fees">
+          <div class="">
+            <div class="service-fees">SERVICE FEES</div>
+            <div class="monthly-fee">MONTHLY ACCOUNT SERVICE FEE</div>
+          </div>
+          <div></div>
+          <div></div>
+          <div class="amount">5.00</div>
+          <div></div>
+        </div>
+        <div class="summary-fees">
+            <div class="service-fees">Total Account Service Fees</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="amount">$0.00</div>
+        </div>
+        <div class="summary-fees">
+            <div class="service-fees">Total Bank Account Fees Charged</div>
+          <div></div>
+          <div></div>
+          <div class="amount"></div>
+          <div class="amount">$0.00</div>
+        </div>
+
+        <div class="please-note">
+            <span class="note-label">Please note:</span> Overseas transaction fees, overseas ATM fees and non ANZ ATM operator fees not included
+        </div>
+
+       
+
+
+
+
+
+
+
+
+
+        <div class="fees-summary"></div>
+        <div class="fee-period">Fees Charged for period : <%= statementDate %> </div>
+        
+        <div class="summary-header2">
+            <div class="amount">Summary of ANZ Transaction Fees</div>
+            <div class="amount">Transactions Total Free Additional</div>
+            <div class="amount">Fee Per Transaction <div class=""> ($)</div> </div>
+            <!-- <div class="amount">Amount Waived <div class=""> ($)</div> </div> -->
+            <div class="amount">Total Charge <div class=""> ($)</div>  </div>
+        </div>
+
+        <div class="summary-fees2">
+          <div class="">
+            <div class="service-fees">SERVICE FEES</div>
+            <div class="monthly-fee">MONTHLY ACCOUNT SERVICE FEE</div>
+          </div>
+          <div></div>
+          <!-- <div></div> -->
+          <div></div>
+          <div class="amount">5.00</div>
+        </div>
+        <div class="summary-fees">
+            <div class="service-fees">Total Account Service Fees</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="amount">$0.00</div>
+        </div>
+        <div class="summary-fees">
+            <div class="service-fees">Total Bank Account Fees Charged</div>
+          <div></div>
+          <div></div>
+          <div class="amount"></div>
+          <div class="amount">$0.00</div>
+        </div>
+
+        <div class="please-note">
+            <span class="note-label">Please note:</span> Overseas transaction fees, overseas ATM fees and non ANZ ATM operator fees not included
+        </div>
+
+        <div class="please-note">
+            <span class="note-label">Please note:</span>Your fee cycle may not always reconcile with your statement cycle. This statement date ends on 30/04/20 and the monthly
+            fee cycle, as appears above, ended on 30/04/20.
+        </div>
+
+        <div class="fee-saving-tip">
+            <div class="fee-saving-header">ANZ Fee Saving Tip</div>
+            <div class="please-note-bottom">
+                Easy access <span class="note-label">with ANZ Internet Banking and goMoney™</span>
+            </div>
+            <div class="please-note-bottom">
+                Accessing your money when and where you want is easy with ANZ Internet Banking and ANZ goMoney™ App. You can view account balances, transfer money, pay bills or pay friends.
+            </div>
+            <div class="trademark-info">
+                ANZ goMoney is a registered trade mark of Australia and New Zealand Banking Group Limited (ANZ) ABN 11 005 357 522.
+            </div>
+        </div>
+
+      </div>
+    </div>
+    </feeSummary>
+
+
+    <TransactionConclusion>
+
+      <div class="TransactionConclusion">
+        <div class="statement-header">
+          <h1 class="statement-title">ANZ ACCESS ADVANTAGE STATEMENT</h1>
+          <h3 class="account-number">Account Number 123456789</h3>
+        </div>
+
+        <div class="section">
+          <h1 class="section-h1">New Profile menu in ANZ Internet Banking</h1>
+          
+          <p class="section-p">The new Profile menu in ANZ Internet Banking lets you securely manage your contact information and security details. You can find the new menu in the top right corner of ANZ Internet Banking.</p>
+          
+          <p class="section-p">Keep your contact information up to date, as these details may be used for security purposes (e.g. to verify transactions), or send you account information.</p>
+          
+          <p class="section-p">You can also choose which offers and promotions you want to receive and how. You can select as many as you like and make changes any time.</p>
+          
+          <p class="visit-text">Visit <a href="http://www.anz.com.au" class="link">www.anz.com.au</a> to explore your Profile today.</p>
+      </div>
+
+      <div class="important-section">
+          <h1 class="important-title">It's now more important than ever to get on top of your money</h1>
+          
+          <p class="important-text">More information is now being shared with the credit reporting bodies for your overdraft and loan accounts. So now it's more important than ever to understand your credit health and make your repayments on time.</p>
+          
+          <p class="more-info">To find out more visit <a href="http://www.anz.com/creditreporting" class="link">www.anz.com/creditreporting</a></p>
+      </div>
+
+
+      <div class="important-info-container">
+        <h2 class="important-heading">IMPORTANT INFORMATION</h2>
+        
+        <div class="check-entries">
+            PLEASE CHECK THE ENTRIES AND CALL 13 13 14 REGARDING ANY ERRORS ON THIS STATEMENT.
+        </div>
+        
+        <p class="info-text">
+            All entries generated are subject to authorisation and verification and if necessary, adjustments will appear on a later statement.
+        </p>
+        
+        <p class="info-text">
+            If you have a complaint or unresolved issue with ANZ's product or service please call our National Feedback Line <span class="phone-number">1800 805 154</span> and advise us. Further information in relation to ANZ's dispute resolution process and this product (including details of benefits or fees and charges) is available on request and you can access this information by reviewing the Terms and Conditions, and Fees and Charges brochures which can be found at <a href="http://www.anz.com" class="info-link">www.anz.com</a> or by calling <span class="phone-number">13 13 14</span>.
+        </p>
+    </div>
+
+      </div>
+      
+    </TransactionConclusion>
+</body>
+</html>

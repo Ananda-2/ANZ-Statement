@@ -1,0 +1,624 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 20px;
+  margin-left: 35px;
+}
+
+/* Header Section */
+header {
+  margin-top: 10px;
+  text-align: right;
+  padding: 20px;
+  /* border-bottom: 2px solid #0073aa; */
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.logo {
+  width: 150px; /* Adjust as needed */
+  /* margin-bottom: 1px; */
+}
+
+.header-h1 {
+  font-size: 26px;
+  color: #249fd8;
+  font-weight: bold ;
+  margin-right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.statement-info {
+  /* margin-left: 250px; */
+  color: #51b0dc;
+  font-weight: 300;
+  font-size: 16px;
+}
+.date-range{
+  color: #51b0dc;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+/* Account Holder Information */
+.account-holder-info {
+  font-size: 14px;
+  color: #47494a;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+/* Account Summary Section */
+
+
+
+.account-summary { 
+  /* max-width: 1000px; */
+  margin: 20px;
+  margin-top: 150px;
+}
+
+h1 {
+  color: #0090be;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.account-details {
+  padding: 20px 0;
+  text-align: left;
+}
+
+.detail-group {
+  margin-bottom: 20px;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.balance-summary {
+  text-align: right;
+  margin: 0 auto;
+  align-items:end;
+  justify-content: right;
+  background: linear-gradient(to bottom, #e0f2fc 60%, #01b0e7 40%);
+  padding: 0px;
+  /* border-radius: 10px; */
+  color: #333;
+  width: 50vw;
+  align-items: end;
+  
+}
+
+.balance-item {
+  text-align: center;
+  margin: 5px 0;
+  padding: 10px 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.balance-item:last-child {
+  border: none;
+  color: white;
+}
+
+.balance-label {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.balance-amount {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.amount-symbol {
+  font-size: 20px;
+  vertical-align: top;
+}
+
+/* Footer Section */
+
+
+footer {
+  padding: 20px;
+  border-top: 2px solid #0692ce;
+  /* text-align: center; */
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+.contact-header {
+  color: #0095D9;
+  font-size: 15px;
+  margin-top:  100px;
+  margin-bottom: 10px;
+}
+
+.contact-content {
+  background-color: #ebf3f9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.contact-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact-divider::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  height: 150px;
+  width: 2px;
+  background-color: #ffffff;
+}
+
+.or-circle {
+  z-index: 10;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contact-icon {
+  font-size: 24px;
+  color: #002D72;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  color: #002D72;
+  margin-bottom: 5px;
+}
+
+.contact-link {
+  color: #002D72;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.phone-numbers {
+  text-align: center;
+}
+
+.phone-line {
+  margin: 5px 0;
+}
+
+.legal-info {
+  font-size: 8px;
+  color: #3697dc;
+  margin-top: 10px;
+  /* padding: 0 30px; */
+  text-align: left;
+  margin-left: 0;
+}
+
+.reference-number {
+  font-size: 9px;
+  font-weight: bold;
+  color: #666;
+  /* text-align: right; */
+  margin-top: 5px;
+  padding-right: 30px;
+}
+
+
+
+
+/* -------------------  transaction   ------------------ */
+
+.transaction-container{
+  margin: 0 20px;
+  margin-top: 300px;
+  /* margin-bottom: 20px; */
+}
+
+.statement-header {
+  margin-bottom: 5px;
+  text-align: right;
+  padding-top: 70px;
+}
+
+.statement-title {
+  /* margin-top: 100px; */
+  color: #0095D9;
+  font-size: 24px;
+  margin: 0;
+}
+
+.account-number {
+  text-align: right;
+  font-size: 14px;
+  margin-top: 2px;
+  font-weight: normal;
+}
+
+.transaction-section h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.tax-notice {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.bold-transaction-details{
+  font-weight: bold;
+}
+.transactions-table th {
+  /* text-align: left; */
+  padding: 10px 1px;
+  border-bottom: 1px solid #333;
+  font-weight: normal;
+}
+
+.transactionPage2{
+  margin-top: 70px;
+}
+
+.transactions-table td {
+  padding: 3px 0;
+  border-bottom: 0.5px solid #343333;
+}
+
+.amount-column-left{
+  text-align: left;
+  /* margin-right: 10px; */
+  min-width: 50px;
+}
+
+.date-column {
+  max-width: 20px;
+  white-space: nowrap;
+}
+
+.amount-column {
+  text-align: right;
+  width: 120px;
+}
+
+.balance-column {
+  text-align: right;
+  width: 120px;
+  font-weight: bold;
+}
+
+.transaction-details {
+  max-width: 600px;
+  padding-left: 25px;
+}
+
+.transaction-description {
+  font-size: 12px;
+  color: #666;
+  margin-top: 0px;
+}
+
+.year-marker {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.opening-balance {
+  font-weight: bold;
+}
+.transaction-Footer{
+  margin-top: 100px;
+}
+.transaction-Footer-Title{
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid#000;
+}
+.transaction-Footer-content{
+  border-bottom: 1px solid#000;
+  font-size: 12px;
+  padding: 4px 0;
+}
+.transaction-Footer-content-first{
+  width: 30px;
+}
+.transaction-Footer-content-second{
+  margin-left: 20px;
+
+}
+.transaction-Footer-content-last{
+  text-align: right;
+  margin-left: 500px;
+}
+
+
+
+.statement-container {
+  /* max-width: 800px; */
+  margin-left: 45px;
+}
+
+.fees-statement-container{
+  margin-top: 420px;
+
+}
+
+
+.fees-summary{
+  font-size: small;
+  font-weight: bold;
+  border-bottom: 1px solid #000; 
+  margin-top: 50px;
+}
+.fee-period {
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+.summary-header {
+  display: grid;
+  grid-template-columns: 40% 20% 16% 12% 12%;
+  font-weight: bold;
+  border-bottom: .3px solid #000;
+  /* padding: 3px; */
+  margin-bottom: 3px;
+  text-align: center;
+}
+.summary-header2 {
+  display: grid;
+  grid-template-columns: 40% 32% 16% 12%;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  /* padding: 3px; */
+  margin-bottom: 3px;
+  text-align: center;
+}
+.summary-fees {
+  display: grid;
+  grid-template-columns: 40% 20% 16% 12% 12%;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  /* padding: 3px; */
+  margin-bottom: 3px;
+  text-align: left;
+  padding: 2px;
+}
+.summary-fees2 {
+  display: grid;
+  grid-template-columns: 40% 32% 16%  12%;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  /* padding: 3px; */
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+.fee-row {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  padding: 2px 0;
+}
+
+.service-fees {
+  font-weight: bold;
+  /* margin-top: 10px; */
+  font-size: 13px;
+}
+
+.monthly-fee {
+  font-size: 13px;
+  font-weight: normal;
+  /* padding-left: 20px; */
+}
+
+.total-fees {
+  font-weight: bold;
+  border-top: 1px solid #000;
+  padding-top: 3px;
+  margin-top: 3px;
+}
+
+.amount {
+  text-align: center;
+  font-size: 13px;
+  padding-left: 3px;
+
+}
+
+.please-note {
+  margin-top: 5px;
+  margin-bottom: 50px;
+  font-size: 12px;
+}
+.please-note-bottom {
+  margin-top: 5px;
+  /* margin-bottom: 50px; */
+  font-size: 12px;
+}
+
+.note-label {
+  font-weight: bold;
+}
+
+.fee-saving-tip {
+  margin-top: 30px;
+}
+
+.fee-saving-header {
+  font-weight: bold;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.banking-access {
+  margin-bottom: 10px;
+}
+
+.trademark-info {
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+.blue-text {
+  color: #000080;
+}
+
+
+
+
+
+
+
+
+.TransactionConclusion{
+  margin-top: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section {
+  /* margin: 50px 35px ; */
+
+}
+
+.section-h1 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+  margin-top: 50px;
+}
+
+.section-p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  /* line-height: 1.6; */
+}
+
+.link {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+.visit-text {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.important-section {
+  margin-top: 40px;
+}
+
+.important-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.important-text {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.more-info {
+  font-size: 13px;
+}
+
+
+
+.important-info-container {
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
+  margin-top: 100px;
+  background-color: #e2f4fd;  /* Light blue background */
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.important-heading {
+  color: #003366;  /* Dark blue color */
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.check-entries {
+  color: #0099cc;  /* Bright blue color */
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.info-text {
+  font-size: 10px;
+  /* line-height: 1.5; */
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 400;
+}
+
+.info-link {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.phone-number {
+  font-weight: bold;
+  color: #000;
+}
