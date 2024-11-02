@@ -22,280 +22,280 @@ const data = {
   closingBalance: "14,135.10",
   accountNumber: "468441274",
   bsb: "012-327",
-  transactions : [
-      {
-        "isYear": true,
-        "year": "2023",
-        "date": "27 MAR",
-        "details": "OPENING BALANCE",
-        "balance": "10,264.69"
-      },
-      {
-        "date": "28 JAN",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "100.00",
-        "balance": "10,364.69"
-      },
-      {
-        "date": "31 JAN",
-        "details": "ANZ INTERNET BANKING TRANSFER",
-        "description": "WAGES 31032020 CLEANING EDGE SO",
-        "deposit": "947.39",
-        "balance": "11,312.08"
-      },
-      {
-        "date": "01 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "50.00",
-        "balance": "11,362.08"
-      },
-      {
-        "date": "01 FEB",
-        "details": "REVERSAL OF ACCOUNT SERVICING FEE",
-        "description": "MINIMUM $2000 IN DEPOSITS RECEIVED",
-        "deposit": "5.00",
-        "balance": "11,367.08"
-      },
-      {
-        "date": "02 FEB",
-        "details": "ACCOUNT SERVICING FEE",
-        "withdrawal": "5.00",
-        "balance": "11,362.08"
-      },
-      {
-        "date": "03 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS",
-        "description": "EFFECTIVE DATE 03 FEB 2023",
-        "withdrawal": "20.00",
-        "balance": "11,382.08"
-      },
-      {
-        "date": "03 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS",
-        "description": "EFFECTIVE DATE 03 FEB 2023",
-        "withdrawal": "50.00",
-        "balance": "11,432.08"
-      },
-      {
-        "date": "04 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "30.00",
-        "balance": "11,462.08"
-      },
-      {
-        "date": "04 FEB",
-        "details": "TRANSFER FROM NASARUDIN N N",
-        "description": "MAKAN RUMAH HUTANG",
-        "deposit": "165.50",
-        "balance": "11,627.58"
-      },
-      {
-        "date": "05 FEB",
-        "details": "ANZ MOBILE BANKING PAYMENT 770177",
-        "description": "TO SAPIODIN L H",
-        "withdrawal": "50.00",
-        "balance": "11,577.58"
-      },
-      {
-        "date": "05 FEB",
-        "details": "ANZ MOBILE BANKING PAYMENT 387663",
-        "description": "TO SAPIODIN L H",
-        "withdrawal": "75.00",
-        "balance": "11,502.58"
-      },
-      {
-        "date": "06 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "50.00",
-        "balance": "11,552.58"
-      },
-      {
-        "date": "07 FEB",
-        "details": "ANZ INTERNET BANKING TRANSFER",
-        "description": "WAGES 07042020 CLEANING EDGE SO",
-        "deposit": "1,266.66",
-        "balance": "12,819.24"
-      },
-      {
-        "date": "08 FEB",
-        "details": "ANZ MOBILE BANKING PAYMENT 384025",
-        "description": "TO FAUZIAH SAPIODIN",
-        "withdrawal": "200.00",
-        "balance": "12,619.24"
-      },
-      {
-        "date": "09 FEB",
-        "details": "ANZ ATM CARD 9655",
-        "withdrawal": "20.00",
-        "balance": "12,639.24"
-      },
-      {
-        "date": "09 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "50.00",
-        "balance": "12,689.24"
-      },
-      {
-        "date": "10 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "50.00",
-        "balance": "12,739.24"
-      },
-      {
-        "date": "11 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS",
-        "description": "EFFECTIVE DATE 11 APR 2020",
-        "withdrawal": "70.00",
-        "balance": "12,809.24"
-      },
-      {
-        "date": "12 FEB",
-        "details": "PAYMENT FROM MOHD NOOR AKHERY BIN MOHAME",
-        "description": "EFFECTIVE DATE 12 FEB 2023",
-        "deposit": "30.00",
-        "balance": "12,839.24"
-      },
-      {
-        "date": "12 FEB",
-        "details": "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
-        "description": "EFFECTIVE DATE 12 FEB 2023",
-        "withdrawal": "500.00",
-        "balance": "12,339.24"
-      },
-      {
-        "date": "14 FEB",
-        "details": "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
-        "withdrawal": "300.00",
-        "balance": "12,039.24"
-      },
-      {
-        "date": "14 FEB",
-        "details": "ANZ INTERNET BANKING TRANSFER",
-        "description": "WAGES 14042020 CLEANING EDGE SO",
-        "deposit": "1,294.09",
-        "balance": "13,333.33"
-      },
-      {
-        "date": "15 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "50.00",
-        "balance": "13,383.33"
-      },
-      {
-        "date": "16 FEB",
-        "details": "ANZ M-BANKING FUNDS TFER",
-        "description": "TRANSFER 211328 TO 012125319116005",
-        "withdrawal": "500.00",
-        "balance": "12,883.33"
-      },
-      {
-        "date": "17 FEB",
-        "details": "ACCOUNT SERVICING FEE",
-        "description": "MINIMUM $2000 IN DEPOSITS NOT RECEIVED",
-        "withdrawal": "5.00",
-        "balance": "12,878.33"
-      },
-      {
-        "date": "17 FEB",
-        "details": "ANZ MOBILE BANKING PAYMENT 950308",
-        "description": "TO NASARUDIN N N",
-        "withdrawal": "400.00",
-        "balance": "12,478.33"
-      },
-      {
-        "date": "",
-        "details": "TOTALS AT END OF PAGE",
-        "withdrawal": "$2,035.00",
-        "balance": "$4,248.64"
-      }
-    ],
-    transactions2:[
-      {
-        "date": "21 FEB",
-        "details": "ANZ INTERNET BANKING TRANSFER",
-        "description": "WAGES 21042020 CLEANING EDGE SO",
-        "deposit": "1,132.01",
-        "balance": "13,610.34"
-      },
-      {
-        "date": "22 FEB",
-        "details": "ANZ M-BANKING FUNDS TFER",
-        "description": "TRANSFER 445763 FROM 319116005",
-        "deposit": "100.00",
-        "balance": "13,710.34"
-      },
-      {
-        "date": "22 FEB",
-        "details": "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
-        "withdrawal": "500.00",
-        "balance": "13,210.34"
-      },
-      {
-        "date": "23 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "60.00",
-        "balance": "13,270.34"
-      },
-      {
-        "date": "23 FEB",
-        "details": "ANZ ATM BRANCH GRIFFITH NS 2680",
-        "withdrawal": "50.00",
-        "balance": "13,320.34"
-      },
-      {
-        "date": "24 FEB",
-        "details": "ANZ ATM CARD 9077",
-        "withdrawal": "30.00",
-        "balance": "13,350.34"
-      },
-      {
-        "date": "25 FEB",
-        "details": "ANZ ATM CARD 9655",
-        "withdrawal": "20.00",
-        "balance": "13,370.34"
-      },
-      {
-        "date": "26 FEB",
-        "details": "TRANSFER FROM ATM GRIFFITH",
-        "description": "EFFECTIVE DATE 26 FEB 2020",
-        "deposit": "100.00",
-        "balance": "13,470.34"
-      },
-      {
-        "date": "26 FEB",
-        "details": "TRANSFER FROM ATM GRIFFITH",
-        "description": "GRIFFITH BRANCH GRIFFITH NS",
-        "deposit": "100.00",
-        "balance": "13,570.34"
-      },
-      {
-        "date": "28 FEB",
-        "details": "ANZ INTERNET BANKING TRANSFER",
-        "description": "WAGES 21042020 CLEANING EDGE SO EFFECTIVE 28 FEB 2023",
-        "deposit": "1,114.76",
-        "balance": "14,685.10"
-      },
-      {
-        "date": "28 FEB",
-        "details": "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
-        "description": "EFFECTIVE DATE 28 FEB 2023",
-        "withdrawal": "550.00",
-        "balance": "14,135.10"
-      },
-      {
-        "date": "",
-        "details": "TOTALS AT END OF PAGE",
-        "withdrawal": "$1,500.00",
-        "balance": "$3,156.77"
-      },
-      {
-        "date": "",
-        "details": "TOTALS AT END OF PERIOD",
-        "withdrawal": "$3,535.00",
-        "deposit": "$7,405.41",
-        "balance": "$14,135.10"
-      }
-    ],
+  transactions: [
+    {
+      isYear: true,
+      year: "2023",
+      date: "27 MAR",
+      details: "OPENING BALANCE",
+      balance: "10,264.69",
+    },
+    {
+      date: "28 JAN",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "100.00",
+      balance: "10,364.69",
+    },
+    {
+      date: "31 JAN",
+      details: "ANZ INTERNET BANKING TRANSFER",
+      description: "WAGES 31032020 CLEANING EDGE SO",
+      deposit: "947.39",
+      balance: "11,312.08",
+    },
+    {
+      date: "01 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "50.00",
+      balance: "11,362.08",
+    },
+    {
+      date: "01 FEB",
+      details: "REVERSAL OF ACCOUNT SERVICING FEE",
+      description: "MINIMUM $2000 IN DEPOSITS RECEIVED",
+      deposit: "5.00",
+      balance: "11,367.08",
+    },
+    {
+      date: "02 FEB",
+      details: "ACCOUNT SERVICING FEE",
+      withdrawal: "5.00",
+      balance: "11,362.08",
+    },
+    {
+      date: "03 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS",
+      description: "EFFECTIVE DATE 03 FEB 2023",
+      withdrawal: "20.00",
+      balance: "11,382.08",
+    },
+    {
+      date: "03 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS",
+      description: "EFFECTIVE DATE 03 FEB 2023",
+      withdrawal: "50.00",
+      balance: "11,432.08",
+    },
+    {
+      date: "04 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "30.00",
+      balance: "11,462.08",
+    },
+    {
+      date: "04 FEB",
+      details: "TRANSFER FROM NASARUDIN N N",
+      description: "MAKAN RUMAH HUTANG",
+      deposit: "165.50",
+      balance: "11,627.58",
+    },
+    {
+      date: "05 FEB",
+      details: "ANZ MOBILE BANKING PAYMENT 770177",
+      description: "TO SAPIODIN L H",
+      withdrawal: "50.00",
+      balance: "11,577.58",
+    },
+    {
+      date: "05 FEB",
+      details: "ANZ MOBILE BANKING PAYMENT 387663",
+      description: "TO SAPIODIN L H",
+      withdrawal: "75.00",
+      balance: "11,502.58",
+    },
+    {
+      date: "06 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "50.00",
+      balance: "11,552.58",
+    },
+    {
+      date: "07 FEB",
+      details: "ANZ INTERNET BANKING TRANSFER",
+      description: "WAGES 07042020 CLEANING EDGE SO",
+      deposit: "1,266.66",
+      balance: "12,819.24",
+    },
+    {
+      date: "08 FEB",
+      details: "ANZ MOBILE BANKING PAYMENT 384025",
+      description: "TO FAUZIAH SAPIODIN",
+      withdrawal: "200.00",
+      balance: "12,619.24",
+    },
+    {
+      date: "09 FEB",
+      details: "ANZ ATM CARD 9655",
+      withdrawal: "20.00",
+      balance: "12,639.24",
+    },
+    {
+      date: "09 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "50.00",
+      balance: "12,689.24",
+    },
+    {
+      date: "10 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "50.00",
+      balance: "12,739.24",
+    },
+    {
+      date: "11 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS",
+      description: "EFFECTIVE DATE 11 APR 2020",
+      withdrawal: "70.00",
+      balance: "12,809.24",
+    },
+    {
+      date: "12 FEB",
+      details: "PAYMENT FROM MOHD NOOR AKHERY BIN MOHAME",
+      description: "EFFECTIVE DATE 12 FEB 2023",
+      deposit: "30.00",
+      balance: "12,839.24",
+    },
+    {
+      date: "12 FEB",
+      details: "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
+      description: "EFFECTIVE DATE 12 FEB 2023",
+      withdrawal: "500.00",
+      balance: "12,339.24",
+    },
+    {
+      date: "14 FEB",
+      details: "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
+      withdrawal: "300.00",
+      balance: "12,039.24",
+    },
+    {
+      date: "14 FEB",
+      details: "ANZ INTERNET BANKING TRANSFER",
+      description: "WAGES 14042020 CLEANING EDGE SO",
+      deposit: "1,294.09",
+      balance: "13,333.33",
+    },
+    {
+      date: "15 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "50.00",
+      balance: "13,383.33",
+    },
+    {
+      date: "16 FEB",
+      details: "ANZ M-BANKING FUNDS TFER",
+      description: "TRANSFER 211328 TO 012125319116005",
+      withdrawal: "500.00",
+      balance: "12,883.33",
+    },
+    {
+      date: "17 FEB",
+      details: "ACCOUNT SERVICING FEE",
+      description: "MINIMUM $2000 IN DEPOSITS NOT RECEIVED",
+      withdrawal: "5.00",
+      balance: "12,878.33",
+    },
+    {
+      date: "17 FEB",
+      details: "ANZ MOBILE BANKING PAYMENT 950308",
+      description: "TO NASARUDIN N N",
+      withdrawal: "400.00",
+      balance: "12,478.33",
+    },
+    {
+      date: "",
+      details: "TOTALS AT END OF PAGE",
+      withdrawal: "$2,035.00",
+      balance: "$4,248.64",
+    },
+  ],
+  transactions2: [
+    {
+      date: "21 FEB",
+      details: "ANZ INTERNET BANKING TRANSFER",
+      description: "WAGES 21042020 CLEANING EDGE SO",
+      deposit: "1,132.01",
+      balance: "13,610.34",
+    },
+    {
+      date: "22 FEB",
+      details: "ANZ M-BANKING FUNDS TFER",
+      description: "TRANSFER 445763 FROM 319116005",
+      deposit: "100.00",
+      balance: "13,710.34",
+    },
+    {
+      date: "22 FEB",
+      details: "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
+      withdrawal: "500.00",
+      balance: "13,210.34",
+    },
+    {
+      date: "23 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "60.00",
+      balance: "13,270.34",
+    },
+    {
+      date: "23 FEB",
+      details: "ANZ ATM BRANCH GRIFFITH NS 2680",
+      withdrawal: "50.00",
+      balance: "13,320.34",
+    },
+    {
+      date: "24 FEB",
+      details: "ANZ ATM CARD 9077",
+      withdrawal: "30.00",
+      balance: "13,350.34",
+    },
+    {
+      date: "25 FEB",
+      details: "ANZ ATM CARD 9655",
+      withdrawal: "20.00",
+      balance: "13,370.34",
+    },
+    {
+      date: "26 FEB",
+      details: "TRANSFER FROM ATM GRIFFITH",
+      description: "EFFECTIVE DATE 26 FEB 2020",
+      deposit: "100.00",
+      balance: "13,470.34",
+    },
+    {
+      date: "26 FEB",
+      details: "TRANSFER FROM ATM GRIFFITH",
+      description: "GRIFFITH BRANCH GRIFFITH NS",
+      deposit: "100.00",
+      balance: "13,570.34",
+    },
+    {
+      date: "28 FEB",
+      details: "ANZ INTERNET BANKING TRANSFER",
+      description: "WAGES 21042020 CLEANING EDGE SO EFFECTIVE 28 FEB 2023",
+      deposit: "1,114.76",
+      balance: "14,685.10",
+    },
+    {
+      date: "28 FEB",
+      details: "ANZ ATM GRIFFITH BRANCH GRIFFITH NS",
+      description: "EFFECTIVE DATE 28 FEB 2023",
+      withdrawal: "550.00",
+      balance: "14,135.10",
+    },
+    {
+      date: "",
+      details: "TOTALS AT END OF PAGE",
+      withdrawal: "$1,500.00",
+      balance: "$3,156.77",
+    },
+    {
+      date: "",
+      details: "TOTALS AT END OF PERIOD",
+      withdrawal: "$3,535.00",
+      deposit: "$7,405.41",
+      balance: "$14,135.10",
+    },
+  ],
   totalFees: "5.00",
 };
 
@@ -471,6 +471,7 @@ app.get("/download", async (req, res) => {
 //   }
 // });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
