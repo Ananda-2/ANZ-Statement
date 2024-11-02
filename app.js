@@ -347,7 +347,9 @@ app.get("/download", async (req, res) => {
     browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
-    await page.goto("http://localhost:3000/", { waitUntil: "networkidle2" });
+    await page.goto("https://anz-statement.onrender.com/", {
+      waitUntil: "networkidle2",
+    });
     await page.setViewport({ width: 1680, height: 1050 });
 
     const todayDate = new Date();
